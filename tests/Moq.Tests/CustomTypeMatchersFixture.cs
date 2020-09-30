@@ -148,7 +148,7 @@ namespace Moq.Tests
 			var invocationCount = 0;
 			var mock = new Mock<IX>();
 			mock.Setup(m => m.Method(It.Is<IntOrString>((arg, _) => acceptableArgs.Contains(arg))))
-			    .Callback((object arg) => invocationCount++);
+				.Callback((object arg) => invocationCount++);
 
 			mock.Object.Method(42);
 			mock.Object.Method(7);
